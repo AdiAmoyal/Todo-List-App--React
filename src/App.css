@@ -3,9 +3,17 @@
   padding: 0;
 }
 
+body {
+  background-image: linear-gradient(120deg, #faedbf 0%, #f2baac 100%);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
 .card {
   width: 60%;
   border-radius: 12px;
+  background-color: #fff;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
   padding: 1rem;
 
@@ -16,9 +24,25 @@
 
   font-size: 24px;
   font-family: sans-serif;
-  color: rgba(188, 110, 65, 0.896);
+  color: #e08872;
 
   margin: 40px auto;
+}
+
+.button {
+  border-radius: 9px;
+  border: none;
+  margin-bottom: 7px;
+  height: 35px;
+  width: 85px;
+  padding: 0.25rem 1rem;
+  background-image: linear-gradient(150deg, #faedbf 0%, #f2baac 100%);
+  font-size: 15px;
+}
+
+.button:hover,
+.button:active {
+    background: rgba(251, 191, 154, 0.669);
 }
 
 .new-task__form {
@@ -39,7 +63,7 @@
   font: inherit;
   padding: 0.5rem;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #f2baac;
   width: 20rem;
   max-width: 100%;
 }
@@ -60,38 +84,50 @@ ul {
   width: inherit;
   list-style: none;
   margin: 12px 0px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .task-item__description {
   padding: 1rem;
-  background-color: rgba(251, 184, 145, 0.542);
   border-radius: 6px;
   font-size: 15px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.task-item_details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0.9;
+}
+
+.task-item__actions {
+  margin-left: 8px;
+  width: auto;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  /* gap: 2rem; */
+  justify-content: space-between;
+  flex: 0.1;
+}
+
+.task-item__check,
+.task-item__trash {
+  width: auto;
+  height: 35px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-left: 6px;
 }
 
 .task-item__date {
   align-self: right;
-}
-
-.button {
-  border-radius: 9px;
-  border: none;
-
-  height: 35px;
-  width: 85px;
-  padding: 0.25rem 1rem;
-  background-color: rgba(255, 220, 200, 0.542);
-  font-size: 15px;
-}
-
-.button:hover,
-.button:active {
-    background: rgba(251, 191, 154, 0.669);
 }
 
 .tasks-list__header {

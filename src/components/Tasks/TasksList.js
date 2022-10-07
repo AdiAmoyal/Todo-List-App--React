@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '../UI/Button';
 
 import Card from '../UI/Card';
 import TaskItem from './TaskItem';
@@ -11,7 +10,13 @@ const TasksList = props => {
             <h3>Tasks List</h3>
             <ul>
                 {props.items.map((task, i) => (
-                    <TaskItem id={i} title={task.task} date={task.date}></TaskItem>
+                    <TaskItem 
+                    id={i}
+                    title={task.task} 
+                    date={task.date} 
+                    completed={task.completed} 
+                    onRemove={props.onRemove}
+                    onCopmleted={props.onCompleted}></TaskItem>
                 ))}
             </ul>
         </Card>

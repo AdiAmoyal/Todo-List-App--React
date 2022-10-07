@@ -13,7 +13,7 @@ const NewTask = props => {
             return;
         }
 
-        props.addNewTask({task: enteredTask, date: new Date(enteredDate), check: false});
+        props.addNewTask({task: enteredTask, date: new Date(enteredDate), completed: false});
         setTask('');
         setDate('');
     };
